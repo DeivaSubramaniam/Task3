@@ -1,0 +1,231 @@
+<div class="shift1">
+<br><br>
+<form [formGroup]="Shift1Form" role="form" (ngSubmit)="onSubmit(Shift1Form)" novalidate>
+   <table class="table">
+        <thead>
+          <tr>
+            <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+              <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+            <th>Shift1</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr formArrayName="Monday" >
+            <td><input type="checkbox"></td>
+            <td>Monday</td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Monday')" ></p-calendar></div></td>
+            <td><button type="button" (click)="ApplyForAll('Shift1Form')">APPLY FOR ALL WEEK</button></td>
+          </tr>
+
+          <tr formArrayName="Tuesday">
+            <td><input type="checkbox"></td>
+            <td>Tuesday</td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Tuesday')"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Tuesday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Wednesday">
+            <td><input type="checkbox" ></td>
+            <td>Wednesday</td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Wednesday')"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Wednesday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Thursday">
+            <td><input type="checkbox" ></td>
+            <td>Thursday</td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Thursday')"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Thursday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Friday">
+            <td><input type="checkbox"  ></td>
+            <td>Friday</td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Friday')"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Friday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Saturday">
+            <td><input type="checkbox" ></td>
+            <td>Saturday</td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Saturday')"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Saturday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Sunday">
+            <td><input type="checkbox" ></td>
+            <td>Sunday</td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Sunday')"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Sunday')">COPY THE ABOVE</button></td>
+          </tr>
+        </tbody>
+   </table>
+</form>
+</div>
+<div class="shift2">
+  <br><br>
+<form [formGroup]="Shift2Form" role="form" (ngSubmit)="onSubmit(Shift2Form)" novalidate>
+   <table class="table">
+        <thead>
+          <tr>
+            <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+              <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+            <th>Shift2</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr formArrayName="Monday" >
+            <td><input type="checkbox"></td>
+            <td>Monday</td>
+            <!--<td><input type="text"></td>
+            <td><input type="text"></td>-->
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0" ><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" (click)="ApplyForAll('Shift2Form')">APPLY FOR ALL WEEK</button></td>
+
+          </tr>
+
+          <tr formArrayName="Tuesday">
+            <td><input type="checkbox"></td>
+            <td>Tuesday</td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Tuesday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Wednesday">
+            <td><input type="checkbox" ></td>
+            <td>Wednesday</td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Wednesday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Thursday">
+            <td><input type="checkbox" ></td>
+            <td>Thursday</td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Thursday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Friday">
+            <td><input type="checkbox"  ></td>
+            <td>Friday</td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Friday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Saturday">
+            <td><input type="checkbox" ></td>
+            <td>Saturday</td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Saturday')">COPY THE ABOVE</button></td>
+          </tr>
+          <tr formArrayName="Sunday">
+            <td><input type="checkbox" ></td>
+            <td>Sunday</td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" (click)="CopyTheAbove('Sunday')">COPY THE ABOVE</button></td>
+          </tr>
+        </tbody>
+   </table>
+   <button type="submit" class="btn btn-default">Save</button>
+</form>
+<p *ngIf="error3===true">Change the Value</p>
+</div>
+<!--<br><br>
+<div>
+<form class="Shift1-form" [formGroup]="shift1Details" (ngSubmit)="save(shift1Details)" novalidate>
+  <div class="col-sm-9">
+    <div class="table-responsive-xl">
+        <table class="table">
+          <thead>
+            <tr>
+              <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+                <span class="fa fa-caret-down" aria-hidden="true" ></span></a></th>
+              <th>Shift 1</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let sd of shift1Details">
+              <td><input type="checkbox" name="checked" formControlName = "sd.checked"></td>
+              <td><label for="days">{{sd.days}}</label></td>
+              <td><div class="ui-g-12 ui-md-4"><p-calendar name = "startTime" formControlName = "sd.startTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+              <td><div class="ui-g-12 ui-md-4"><p-calendar name = "endTime" formControlName = "sd.endTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+              <td><button class="btn">{{sd.active.text}}</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <button type="submit" class="btn btn-default">Save</button>
+  </div>
+</form>
+</div>-->
+<!--<br><br>
+<form class="Shift1Details" #f="ngForm" (ngSubmit)="save(f.valid)">
+  <div class="col-sm-4">
+    <div class="table-responsive-xl">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+              <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+            <th>Shift1</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sd of shift1Details">
+            <td><input type="checkbox" [checked]="sd.checked" (change)="sd.checked =!sd.checked"></td>
+            <td>{{sd.days}}</td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar [(ngModel)]="sd.startTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar [(ngModel)]="sd.endTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" class="btn" (click)="ApplyAllWeek(shift1Details)">{{sd.active.text}}</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <button type="submit" class="btn btn-default" (click)="save(f)">Save</button>
+  </div>
+</form>-->
+<!--<br><br>
+<form [formGroup]="Shift1Form" (ngSubmit)="onSubmit(Shift1Form)" novalidate>
+   <table class="table">
+        <thead>
+          <tr>
+            <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+              <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+            <th>Shift1</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sd of shift1Details">
+            <td><input type="checkbox" formControlName = "checked" value = "sd.checked" id="checkbox" required></td>
+            <td><input type="text" id ="weekdays" formControlName = "days" value="{{sd.days}}" ></td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td *ngIf="sd.days=='Monday'"><button type="button" (click)="ApplyForAll()">APPLY FOR ALL WEEK</button></td>
+            <td *ngIf="sd.days!='Monday'"><button type="button" (click)="CopyTheAbove()">COPY THE ABOVE</button></td>
+          </tr>
+        </tbody>
+   </table>
+   <button type="submit" class="btn btn-default">Save</button>
+</form>-->

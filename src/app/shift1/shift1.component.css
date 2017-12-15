@@ -1,0 +1,42 @@
+li {
+      list-style-type:none;
+}
+table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid black;
+}
+th {
+      text-align:center;
+      height: 50px;
+
+  }
+tr {
+      border-left:1px solid black;
+      border-right:1px solid black;
+
+}
+tbody {
+ background-color:#F8F8F8;
+}
+button {
+      width: 250px;
+}
+p-calendar {
+  text-align: right;
+}
+.dropdown-toggle {
+
+}
+#weekdays{
+border:none;
+background-color:#F8F8F8;
+}
+.shift1{
+  margin-left:50px;
+  float:left;
+}
+.shift2{
+margin-right:50px;
+  float:right;
+}

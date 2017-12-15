@@ -1,0 +1,148 @@
+
+<!--<br><br>
+<div>
+<form class="Shift1-form" [formGroup]="shift1Details" (ngSubmit)="save(shift1Details)" novalidate>
+  <div class="col-sm-9">
+    <div class="table-responsive-xl">
+        <table class="table">
+          <thead>
+            <tr>
+              <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+                <span class="fa fa-caret-down" aria-hidden="true" ></span></a></th>
+              <th>Shift 1</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let sd of shift1Details">
+              <td><input type="checkbox" name="checked" formControlName = "sd.checked"></td>
+              <td><label for="days">{{sd.days}}</label></td>
+              <td><div class="ui-g-12 ui-md-4"><p-calendar name = "startTime" formControlName = "sd.startTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+              <td><div class="ui-g-12 ui-md-4"><p-calendar name = "endTime" formControlName = "sd.endTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+              <td><button class="btn">{{sd.active.text}}</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <button type="submit" class="btn btn-default">Save</button>
+  </div>
+</form>
+</div>-->
+<!--<br><br>
+<form class="Shift1Details" #f="ngForm" (ngSubmit)="save(f.valid)">
+  <div class="col-sm-4">
+    <div class="table-responsive-xl">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+              <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+            <th>Shift1</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sd of shift1Details">
+            <td><input type="checkbox" [checked]="sd.checked" (change)="sd.checked =!sd.checked"></td>
+            <td>{{sd.days}}</td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar [(ngModel)]="sd.startTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar [(ngModel)]="sd.endTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+            <td><button type="button" class="btn" (click)="ApplyAllWeek(shift1Details)">{{sd.active.text}}</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <button type="submit" class="btn btn-default" (click)="save(f)">Save</button>
+  </div>
+</form>-->
+<!--<br><br>
+<form [formGroup]="Shift1Form" (ngSubmit)="onSubmit(Shift1Form)" novalidate>
+   <table class="table">
+        <thead>
+          <tr>
+            <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+              <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+            <th>Shift1</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sd of shift1Details">
+            <td><input type="checkbox" formControlName = "checked" value = "sd.checked" id="checkbox" required></td>
+            <td><input type="text" id ="weekdays" formControlName = "days" value="{{sd.days}}" ></td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td *ngIf="sd.days=='Monday'"><button type="button" (click)="ApplyForAll()">APPLY FOR ALL WEEK</button></td>
+            <td *ngIf="sd.days!='Monday'"><button type="button" (click)="CopyTheAbove()">COPY THE ABOVE</button></td>
+          </tr>
+        </tbody>
+   </table>
+   <button type="submit" class="btn btn-default">Save</button>
+</form>-->
+
+<!--<br><br>
+<form [formGroup]="Shift2Form" novalidate>
+   <table class="table">
+        <thead>
+          <tr>
+            <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+              <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+            <th>Shift2</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sd of shift2Details">
+            <td><input type="checkbox" formControlName = "checked" value = "sd.checked" id="checkbox" required></td>
+            <td>{{sd.days}}</td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar formControlName="startTime" [timeOnly]="true" hourFormat="12" aria-required></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4"><p-calendar formControlName="endTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+            <td *ngIf="sd.days=='Monday'"><button type="button" (click)="ApplyForAll()">APPLY FOR ALL WEEK</button></td>
+            <td *ngIf="sd.days!='Monday'"><button type="button" (click)="CopyTheAbove(starttime)">COPY THE ABOVE</button></td>
+          </tr>
+        </tbody>
+   </table>
+   <button type="submit" class="btn btn-default">Save</button>
+</form>-->
+
+<!--<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+            <div class="table-responsive-xl">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><a class="dropdown-toggle" data-toggle="dropdown" href="javascript: void(0)">
+                    <span class="fa fa-caret-down" aria-hidden="true"></span></a></th>
+                    <th>Shift2</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th style = "text-align:right">Active <input type="checkbox" [checked]="true"/></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sd of shiftDetails">
+                  <td><input type="checkbox" [checked]="sd.checked" (change)="sd.checked =!sd.checked"></td>
+                  <td>{{sd.days}}</td>
+                  <td><div class="ui-g-12 ui-md-4"><p-calendar [(ngModel)]="sd.startTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+                  <td><div class="ui-g-12 ui-md-4"><p-calendar [(ngModel)]="sd.endTime" [timeOnly]="true" hourFormat="12"></p-calendar></div></td>
+                  <td><button type="button" class="btn">{{sd.active.text}}</button></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+    </div>
+  </div>
+</div>
+
+
+-->
