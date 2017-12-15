@@ -18,49 +18,49 @@
             <td><input type="checkbox"></td>
             <td>Monday</td>
             <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Monday')" ></p-calendar></div></td>
+            <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="ApplyForAll('Shift1Form')">APPLY FOR ALL WEEK</button></td>
           </tr>
 
           <tr formArrayName="Tuesday">
             <td><input type="checkbox"></td>
             <td>Tuesday</td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Tuesday')"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Tuesday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Wednesday">
             <td><input type="checkbox" ></td>
             <td>Wednesday</td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Wednesday')"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Wednesday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Thursday">
             <td><input type="checkbox" ></td>
             <td>Thursday</td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Thursday')"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Thursday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Friday">
             <td><input type="checkbox"  ></td>
             <td>Friday</td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Friday')"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Friday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Saturday">
             <td><input type="checkbox" ></td>
             <td>Saturday</td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Saturday')"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Saturday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Sunday">
             <td><input type="checkbox" ></td>
             <td>Sunday</td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12" (change)="onChangeValue('Sunday')"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Sunday')">COPY THE ABOVE</button></td>
           </tr>
@@ -83,58 +83,55 @@
           </tr>
         </thead>
         <tbody>
-
           <tr formArrayName="Monday" >
             <td><input type="checkbox"></td>
             <td>Monday</td>
             <!--<td><input type="text"></td>
-            <td><input type="text"></td>-->
+            <td><input type="text" [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"></td>-->
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0" ><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td ><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="ApplyForAll('Shift2Form')">APPLY FOR ALL WEEK</button></td>
-
           </tr>
-
           <tr formArrayName="Tuesday">
             <td><input type="checkbox"></td>
             <td>Tuesday</td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Tuesday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Wednesday">
             <td><input type="checkbox" ></td>
             <td>Wednesday</td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Wednesday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Thursday">
             <td><input type="checkbox" ></td>
             <td>Thursday</td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Thursday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Friday">
             <td><input type="checkbox"  ></td>
             <td>Friday</td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Friday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Saturday">
             <td><input type="checkbox" ></td>
             <td>Saturday</td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Saturday')">COPY THE ABOVE</button></td>
           </tr>
           <tr formArrayName="Sunday">
             <td><input type="checkbox" ></td>
             <td>Sunday</td>
             <td [ngStyle]="{'backgroundColor': error1 === true ? '#ff0000' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="startTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
-            <td [ngStyle]="{'backgroundColor': error3 === true ? '#f8F8F8' : '#F5F5F5' }"><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
+            <td><div class="ui-g-12 ui-md-4" formGroupName="0"><p-calendar formControlName="endTime" timeOnly="true" hourFormat="12"></p-calendar></div></td>
             <td><button type="button" (click)="CopyTheAbove('Sunday')">COPY THE ABOVE</button></td>
           </tr>
         </tbody>
